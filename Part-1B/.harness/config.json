@@ -1,0 +1,5 @@
+{
+  "pass_threshold": 0.90,
+  "scoring": "A case passes only if ALL its checks pass (schema, invariants, semantic). Overall score = passed cases / total cases. Overall PASS if score >= pass_threshold.",
+  "note": "Declare this threshold in your spec BEFORE running the final evaluation. Do not lower it after seeing results."
+}
