@@ -1,9 +1,14 @@
 # Part 1B: Natural-Language Reminder Agent
 
+The model provider is Google Gemini. Set `GEMINI_API_KEY` and
+`MODEL_NAME=gemini-3.5-flash-lite` in your local `.env` file;
+`MODEL_API_KEY` is also accepted as a generic key name. This is the model used
+for the passing evaluation run.
+
 ## Setup
     python -m venv .venv
     source .venv/bin/activate      # Windows: .venv\Scripts\activate
-    pip install pytest ruff bandit
+    python -m pip install -r requirements.txt
     cp .env.example .env           # then add your own API key (never commit .env)
 
 ## Run the agent
