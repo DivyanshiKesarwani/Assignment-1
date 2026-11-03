@@ -1,18 +1,47 @@
 # Part 1A: Smart Todo CLI
 
+Requires Python 3.11 or later.
+
 ## Setup
-    python -m venv .venv
-    source .venv/bin/activate      # Windows: .venv\Scripts\activate
-    pip install pytest ruff bandit
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install pytest ruff bandit
+```
+
+On Windows, activate the environment with `.venv\Scripts\activate`.
 
 ## Run the app
-    python -m src.cli add "Buy milk" --tag home --priority high
-    python -m src.cli list --sort priority
+
+From this directory, set `PYTHONPATH=src` and run the package:
+
+```sh
+PYTHONPATH=src python -m todo_cli add "Buy milk" --tag home --priority high
+PYTHONPATH=src python -m todo_cli list --sort priority
+```
+
+On PowerShell, set the path with `$env:PYTHONPATH = "src"` before running
+`python -m todo_cli`.
+
+Tasks are stored at `./data/tasks.json` unless `TODO_DATA_PATH` points to a
+different JSON file.
+
+## Run tests and quality checks
+
+```sh
+PYTHONPATH=src pytest
+ruff check
+bandit -r src
+```
 
 ## Run the harness
-    python .harness/run_harness.py
 
-Results are written to evidence/harness-results/.
+```sh
+python .harness/run_harness.py
+```
+
+Results are written to `evidence/harness-results/`.
 
 ## AI assistance disclosure
 Coding agent used: <your tool and version>

@@ -2,7 +2,7 @@
 
 Paste these into your agent one at a time, in order. Save each output it produces.
 
-## /speckit.constitution
+## /speckit-constitution
 Project: Smart Todo CLI (Python 3.11+).
 Constraints to enforce:
 - Lint: code must pass `ruff check` with zero errors.
@@ -12,7 +12,7 @@ Constraints to enforce:
 - Dependencies: standard library only, plus pytest, ruff, bandit for development.
 - No secrets, API keys, or credentials in code or committed files.
 
-## /speckit.specify
+## /speckit-specify
 Build a command-line todo manager with these features:
 1. add "<title>" [--tag TAG] [--priority low|medium|high] creates a task with status "open" and a unique integer id. Returns the id.
 2. list [--tag TAG] [--sort priority] shows tasks. Sorting by priority orders high, medium, low, then by id ascending.
@@ -23,17 +23,17 @@ Build a command-line todo manager with these features:
 7. All data persists to JSON across invocations.
 Acceptance criteria must be binary and testable (pass/fail for each).
 
-## /speckit.clarify
+## /speckit-clarify
 Review the specification and list any ambiguities. For each, propose a single answer and record it in the spec. Specifically resolve: maximum title length, behavior on invalid priority, and what happens when the JSON file is missing or corrupt.
 
-## /speckit.plan
+## /speckit-plan
 Create a technical plan using Python standard library only. Define modules for the CLI, task model, storage adapter, and validation. Map each acceptance criterion to the module and test file that will verify it.
 
-## /speckit.tasks
+## /speckit-tasks
 Break the plan into small ordered tasks. Each task must name the acceptance criterion it satisfies and the test that verifies it. Write tests before implementation tasks for each criterion.
 
-## /speckit.analyze
+## /speckit-analyze
 Check consistency across spec, plan, and tasks. Report any criterion without a test or any task without a criterion.
 
-## /speckit.implement
+## /speckit-implement
 Implement the approved tasks only. Do not modify the spec, constitution, or existing tests to make them pass. If a test fails, report the failure and fix the implementation.

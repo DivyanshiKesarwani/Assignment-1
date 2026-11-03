@@ -17,7 +17,7 @@ GATES = {
 
 
 def run_gate(name, cmd):
-    proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+    proc = subprocess.run(cmd, check=False, cwd=ROOT, capture_output=True, text=True)
     return {
         "gate": name,
         "command": " ".join(cmd),
